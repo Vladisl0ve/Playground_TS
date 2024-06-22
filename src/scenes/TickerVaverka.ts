@@ -29,11 +29,13 @@ export class TickerVaverka extends Container {
     }
 
     private update(deltaTime: number): void {
+       // console.log(`fps: ${Ticker.shared.FPS}`);
         this.clampy.x = this.clampy.x + this.clampyVelocity * deltaTime;
 
         if (this.clampy.x > this.screenWidth + this.screenWidth * 0.4) {
             // Woah there clampy, come back inside the screen!
             this.clampy.x = this.startX;
+            this.clampy.tint = '#'+(0x1000000+Math.random()*0xffffff).toString(16).substr(1,6)
         }
     }
 }

@@ -20,12 +20,12 @@ export class VaverkaScene extends Container {
         this.addChild(animatedClampy); // we just add it to the scene
 
         // Now... what did we learn about assigning functions...
-        animatedClampy.onFrameChange = this.onClampyFrameChange.bind(this);
+        //animatedClampy.onFrameChange = this.onClampyFrameChange.bind(this);
         animatedClampy.animationSpeed = 0.655;
         animatedClampy.play();
     }
 
-    private onClampyFrameChange(currentFrame : number): void {
-        console.log("Clampy's current frame is", currentFrame);
-    }
+    // private onClampyFrameChange(currentFrame : number): void {
+    //     console.log("Clampy's current frame is", currentFrame);
+    // }
 }
